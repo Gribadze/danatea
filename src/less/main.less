@@ -1,0 +1,78 @@
+@import 'bower_components/bootstrap/less/bootstrap';
+@import 'bower_components/font-awesome/less/font-awesome';
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic');
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import './theme';
+
+@font-face {
+    font-family: Bobz;
+    src: url('../fonts/10530.ttf');
+}
+
+.logo {
+    width: 150px;
+
+    &-heading {
+        // display: none;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        font-family: Bobz;
+        & span {
+            .transition(all .4s linear);
+
+            &.highlighted {
+                color: @light-font-color;    
+            }
+        }
+    }
+}
+
+.navbar-custom.top-nav-collapse {
+    .box-shadow(@light-shadow);
+    border-bottom: 0;
+}
+
+#activity {
+    h2 {
+        min-height: 66px;
+    }
+
+    a {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 1;
+            .transition(all .4s ease-in-out);
+
+        }
+
+        &:hover {
+            &:after {
+                opacity: 0;
+            }
+        }
+
+        img {
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
+
+.navbar-custom .nav li a:hover {
+    color: @light-font-color;
+}
+
+.intro-body .address {
+    margin: 90px 0 20px;
+}
