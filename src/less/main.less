@@ -9,14 +9,38 @@
     src: url('../fonts/10530.ttf');
 }
 
+@media (min-width: 768px) {
+    .content-section {
+        padding: 80px 0;
+    }
+}
+
+.fa-20x {
+    font-size: 20em;
+}
+
+.navbar-custom.top-nav-collapse .nav li a:hover {
+    color: @normal-font-color;
+}
+
+.intro {
+    height: auto;
+}
+
+.btn-circle {
+    margin-bottom: 50px;
+}
+
 .logo {
-    width: 150px;
+    width: 250px;
 
     &-heading {
         // display: none;
         border-top: 1px solid #333;
         border-bottom: 1px solid #333;
         font-family: Bobz;
+        padding: 6px 0;
+
         & span {
             .transition(all .4s linear);
 
@@ -27,9 +51,28 @@
     }
 }
 
+.navbar-custom {
+    .logo {
+        display: block;
+
+        &-heading {
+            display: none;
+        }
+    }
+}
+
 .navbar-custom.top-nav-collapse {
     .box-shadow(@light-shadow);
     border-bottom: 0;
+
+    .logo {
+        display: none;
+
+        &-heading {
+            display: block;
+            margin-top: -8px;
+        }
+    }
 }
 
 #activity {
@@ -37,34 +80,59 @@
         min-height: 66px;
     }
 
-    a {
+    .activity-group {
         display: block;
         position: relative;
         width: 100%;
         height: 100%;
+        color: @light-font-color;
+        background: @dark-bg-color;
+        padding: 50px 0;
+        .border-top-radius(12px);
+        .border-bottom-radius(12px);
+        .transition(all .4s ease-in-out);
 
-        &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 100%;
-            top: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            opacity: 1;
-            .transition(all .4s ease-in-out);
+        // &:before {
+        //     content: '';
+        //     display: block;
+        //     position: absolute;
+        //     width: 100%;
+        //     top: 0;
+        //     bottom: 0;
+        //     opacity: 1;
 
-        }
+        // }
 
         &:hover {
-            &:after {
-                opacity: 0;
-            }
+            color: @dark-font-color;
+            background: rgba(0, 0, 0, 0.0);
+            .box-shadow(0 -20px 20px rgba(0, 0, 0, 0.1));
+            // &:before {
+            //     opacity: 0;
+            // }
         }
 
         img {
             margin: 0;
             width: 100%;
+        }
+    }
+
+    .panel {
+        margin-top: -12px;
+        padding-top: 12px;
+        border: 0;
+        background: none;
+        .border-top-radius(0);
+        .border-bottom-radius(12px);
+        .box-shadow(0 20px 20px rgba(0, 0, 0, 0.1));
+
+        &-body {
+            ul {
+                li {
+
+                }
+            }
         }
     }
 }
