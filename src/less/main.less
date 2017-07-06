@@ -16,7 +16,7 @@
 }
 
 .fa-20x {
-    font-size: 20em;
+    font-size: 15em;
 }
 
 .navbar-custom.top-nav-collapse .nav li a:hover {
@@ -63,10 +63,22 @@
 
 .navbar-custom {
     .logo {
-        display: block;
+        display: none;
 
         &-heading {
-            display: none;
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-custom {
+        .logo {
+            display: block;
+
+            &-heading {
+                display: none;
+            }
         }
     }
 }
@@ -87,7 +99,7 @@
 
 #activity {
     h2 {
-        min-height: 66px;
+        margin-top: 40px;
     }
 
     .activity-group {
@@ -140,6 +152,8 @@
         &-body {
             ul {
                 li {
+                    font-size: 1.5em;
+                    font-weight: 400;
                     padding: 10px 0;
                     .transition(all 0s);
 
@@ -157,10 +171,27 @@
     }
 }
 
+.intro-body .address {
+    margin: 20px 0;
+}
+
+@media (min-width: 992px) {
+    .fa-20x {
+        font-size: 20em;
+    }
+
+    #activity {
+        h2 {
+            min-height: 66px;
+        }
+    }
+    
+    .intro-body .address {
+        margin: 90px 0 20px;
+    }
+}
+
 .navbar-custom .nav li a:hover {
     color: @light-font-color;
 }
 
-.intro-body .address {
-    margin: 90px 0 20px;
-}

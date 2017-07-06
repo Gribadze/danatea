@@ -34,7 +34,7 @@ $(() => {
             }, i*200);
         }
     };
-    loopBrandHeading();
-    setInterval(loopBrandHeading, 8000);
+    setTimeout(() => loopBrandHeading(), 1400);
+    setInterval(() => setTimeout(loopBrandHeading, 1400), 8000);
     
 });
