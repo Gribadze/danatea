@@ -41,12 +41,22 @@
         font-family: Bobz;
         padding: 6px 0;
 
-        & span {
+        span {
             .transition(all .4s linear);
 
             &.highlighted {
                 color: @light-font-color;    
             }
+        }
+    }
+}
+
+.brand-heading {
+    span {
+        .transition(all .4s linear);
+        
+        &.highlighted {
+            color: @light-font-color;
         }
     }
 }
@@ -130,7 +140,17 @@
         &-body {
             ul {
                 li {
+                    padding: 10px 0;
+                    .transition(all 0s);
 
+                    a {
+                        .transition(all 0s);
+                    }
+
+                    &:hover {
+                        color: @light-font-color;
+                        background-color: @dark-bg-color;
+                    }
                 }
             }
         }
