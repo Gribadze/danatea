@@ -11,7 +11,7 @@ const highlight = (element) => {
     //     }
     // }, 400);
     // setTimeout(hightlight, 10000);
-}
+};
 
 $(() => {
     const logoHeadingLetters = $(".logo-heading span");

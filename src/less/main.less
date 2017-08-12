@@ -5,193 +5,201 @@
 @import './theme';
 
 @font-face {
-    font-family: Bobz;
-    src: url('../fonts/10530.ttf');
+  font-family: Bobz;
+  src: url('../fonts/10530.ttf');
 }
 
 @media (min-width: 768px) {
-    .content-section {
-        padding: 80px 0;
-    }
+  .content-section {
+    padding: 80px 0;
+  }
 }
 
 .fa-20x {
-    font-size: 15em;
+  font-size: 15em;
 }
 
 .navbar-custom.top-nav-collapse .nav li a:hover {
-    color: @normal-font-color;
+  color: @normal-font-color;
 }
 
 .intro {
-    height: auto;
+  height: auto;
 }
 
 .btn-circle {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .logo {
-    width: 250px;
+  width: 250px;
 
-    &-heading {
-        // display: none;
-        border-top: 1px solid #333;
-        border-bottom: 1px solid #333;
-        font-family: Bobz;
-        padding: 6px 0;
+  &-heading {
+    // display: none;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    font-family: Bobz;
+    padding: 6px 0;
 
-        span {
-            .transition(all .4s linear);
+    span {
+      .transition(all .4s linear);
 
-            &.highlighted {
-                color: @light-font-color;    
-            }
-        }
+      &.highlighted {
+        color: @light-font-color;
+      }
     }
+  }
 }
 
 .brand-heading {
-    span {
-        .transition(all .4s linear);
-        
-        &.highlighted {
-            color: @light-font-color;
-        }
+  span {
+    .transition(all .4s linear);
+
+    &.highlighted {
+      color: @light-font-color;
     }
+  }
 }
 
-.navbar-custom {
+.navbar-custom, .navbar-custom.collapsed {
+  .logo {
+    display: none;
+
+    &-heading {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-custom {
     .logo {
+      display: block;
+
+      &-heading {
         display: none;
-
-        &-heading {
-            display: block;
-        }
+      }
     }
-}
-
-@media (min-width: 992px) {
-    .navbar-custom {
-        .logo {
-            display: block;
-
-            &-heading {
-                display: none;
-            }
-        }
-    }
+  }
 }
 
 .navbar-custom.top-nav-collapse {
-    .box-shadow(@light-shadow);
-    border-bottom: 0;
+  .box-shadow(@light-shadow);
+  border-bottom: 0;
 
-    .logo {
-        display: none;
+  .logo {
+    display: none;
 
-        &-heading {
-            display: block;
-            margin-top: -8px;
-        }
+    &-heading {
+      display: block;
+      margin-top: -8px;
     }
+  }
 }
 
 #activity {
-    h2 {
-        margin-top: 40px;
+  h2 {
+    margin-top: 40px;
+  }
+
+  .activity-group {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: @light-font-color;
+    background: @dark-bg-color;
+    padding: 50px 0;
+    .border-top-radius(12px);
+    .border-bottom-radius(12px);
+    .transition(all .4s ease-in-out);
+
+    // &:before {
+    //     content: '';
+    //     display: block;
+    //     position: absolute;
+    //     width: 100%;
+    //     top: 0;
+    //     bottom: 0;
+    //     opacity: 1;
+
+    // }
+
+    &:hover {
+      color: @dark-font-color;
+      background: rgba(0, 0, 0, 0.0);
+      .box-shadow(0 -20px 20px rgba(0, 0, 0, 0.1));
+      // &:before {
+      //     opacity: 0;
+      // }
     }
 
-    .activity-group {
-        display: block;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        color: @light-font-color;
-        background: @dark-bg-color;
-        padding: 50px 0;
-        .border-top-radius(12px);
-        .border-bottom-radius(12px);
-        .transition(all .4s ease-in-out);
-
-        // &:before {
-        //     content: '';
-        //     display: block;
-        //     position: absolute;
-        //     width: 100%;
-        //     top: 0;
-        //     bottom: 0;
-        //     opacity: 1;
-
-        // }
-
-        &:hover {
-            color: @dark-font-color;
-            background: rgba(0, 0, 0, 0.0);
-            .box-shadow(0 -20px 20px rgba(0, 0, 0, 0.1));
-            // &:before {
-            //     opacity: 0;
-            // }
-        }
-
-        img {
-            margin: 0;
-            width: 100%;
-        }
+    img {
+      margin: 0;
+      width: 100%;
     }
+  }
 
-    .panel {
-        margin-top: -12px;
-        padding-top: 12px;
-        border: 0;
-        background: none;
-        .border-top-radius(0);
-        .border-bottom-radius(12px);
-        .box-shadow(0 20px 20px rgba(0, 0, 0, 0.1));
+  .list-group-item-heading {
+    font-weight: bold;
 
-        &-body {
-            ul {
-                li {
-                    font-size: 1.5em;
-                    font-weight: 400;
-                    padding: 10px 0;
-                    .transition(all 0s);
-
-                    a {
-                        .transition(all 0s);
-                    }
-
-                    &:hover {
-                        color: @light-font-color;
-                        background-color: @dark-bg-color;
-                    }
-                }
-            }
-        }
+    span {
+      font-weight: normal;
     }
+  }
+
+  .panel {
+    margin-top: -12px;
+    padding-top: 12px;
+    border: 0;
+    background: none;
+    .border-top-radius(0);
+    .border-bottom-radius(12px);
+    .box-shadow(0 20px 20px rgba(0, 0, 0, 0.1));
+
+    &-body {
+      ul {
+        li {
+          font-size: 1.5em;
+          font-weight: 400;
+          padding: 10px 0;
+          .transition(all 0s);
+
+          a {
+            .transition(all 0s);
+          }
+
+          &:hover {
+            color: @light-font-color;
+            background-color: @dark-bg-color;
+          }
+        }
+      }
+    }
+  }
 }
 
 .intro-body .address {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 @media (min-width: 992px) {
-    .fa-20x {
-        font-size: 20em;
-    }
+  .fa-20x {
+    font-size: 20em;
+  }
 
-    #activity {
-        h2 {
-            min-height: 66px;
-        }
+  #activity {
+    h2 {
+      min-height: 66px;
     }
-    
-    .intro-body .address {
-        margin: 90px 0 20px;
-    }
+  }
+
+  .intro-body .address {
+    margin: 90px 0 20px;
+  }
 }
 
 .navbar-custom .nav li a:hover {
-    color: @light-font-color;
+  color: @light-font-color;
 }
 

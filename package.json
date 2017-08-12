@@ -28,7 +28,12 @@
     "express": "^4.15.3",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-image": "^2.10.0",
     "gulp-less": "^3.3.2",
-    "less": "^2.7.2"
+    "gulp-uglify": "^3.0.0",
+    "less": "^2.7.2",
+    "pump": "^1.0.2",
+    "uglify-js": "^3.0.27"
   }
 }

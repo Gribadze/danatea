@@ -24,6 +24,15 @@ $(function() {
     });
 });
 
+$(document).ready(function() {
+    var hash = window.location.hash;
+    if (hash.length > 0) {
+        $('html,body').stop().animate({
+            scrollTop: $('a[name="'+hash.slice(1)+'"]').offset().top - 75
+        }, 1500, 'easeInOutExpo');
+    }
+})
+
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
