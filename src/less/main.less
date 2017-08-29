@@ -9,6 +9,24 @@
   src: url('../fonts/10530.ttf');
 }
 
+article {
+  margin-bottom: 40px;
+
+  p {
+    font-size: 1em;
+  }
+
+  a {
+    color: @dark-font-color;
+    display: inline-block;
+    border-bottom: 1px dashed @dark-font-color;
+
+    &:hover {
+      border-bottom: 1px solid @dark-font-color;
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .content-section {
     padding: 80px 0;
@@ -140,11 +158,22 @@
     }
   }
 
-  .list-group-item-heading {
-    font-weight: bold;
+  .list-group {
 
-    span {
-      font-weight: normal;
+    list-group-item {
+      cursor: pointer;
+      
+      li {
+        margin-left: 12px;
+      }
+    }
+
+    &-item-heading{
+      font-weight: bold;
+
+      span {
+        font-weight: normal;
+      }
     }
   }
 
@@ -181,13 +210,10 @@
 
 .intro-body .address {
   margin: 20px 0;
+  font-size: 1.2em;
 }
 
 @media (min-width: 992px) {
-  .fa-20x {
-    font-size: 20em;
-  }
-
   #activity {
     h2 {
       min-height: 66px;
@@ -196,6 +222,12 @@
 
   .intro-body .address {
     margin: 90px 0 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fa-20x {
+    font-size: 20em;
   }
 }
 
